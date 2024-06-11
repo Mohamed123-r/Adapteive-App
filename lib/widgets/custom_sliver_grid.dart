@@ -1,3 +1,4 @@
+import 'package:adapteive_app/widgets/costom_item_1.dart';
 import 'package:flutter/material.dart';
 
 class CustomSliverGrid extends StatelessWidget {
@@ -14,12 +15,7 @@ class CustomSliverGrid extends StatelessWidget {
         mainAxisSpacing: 15,
       ),
       itemBuilder: (context, index) {
-        return Container(
-          decoration: BoxDecoration(
-            color: const Color(0xffB4B4B4),
-            borderRadius: BorderRadius.circular(10),
-          ),
-        );
+        return const CustomItem1();
       },
     );
   }
