@@ -1,4 +1,5 @@
 import 'package:adapteive_app/widgets/custom_sliver_grid.dart';
+import 'package:adapteive_app/widgets/custom_sliver_listview.dart';
 import 'package:flutter/material.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -16,6 +17,7 @@ class HomeViewBody extends StatelessWidget {
             ),
           ),
           CustomSliverGrid(),
+          CustomSliverListview(),
         ],
       ),
     );
