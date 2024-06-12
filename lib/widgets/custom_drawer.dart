@@ -2,7 +2,6 @@ import 'package:adapteive_app/models/drawer_item_model.dart';
 import 'package:flutter/material.dart';
 import 'custom_drawer_item_list_view.dart';
 
-
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
 
@@ -16,6 +15,7 @@ class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      backgroundColor: const Color(0xffDBDBDB),
       child: Column(
         children: [
           const DrawerHeader(
@@ -23,6 +23,9 @@ class CustomDrawer extends StatelessWidget {
               Icons.favorite,
               size: 70,
             ),
+          ),
+          const SizedBox(
+            height: 32,
           ),
           CustomDrawerItemListView(item: item),
         ],
