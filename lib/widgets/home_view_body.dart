@@ -1,25 +1,26 @@
-import 'package:adapteive_app/widgets/custom_sliver_grid.dart';
-import 'package:adapteive_app/widgets/custom_sliver_listview.dart';
+import 'package:adapteive_app/widgets/tablet_layout.dart';
 import 'package:flutter/material.dart';
+import 'mobile_layout.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16.0),
-      child: CustomScrollView(
-        slivers: [
-          SliverToBoxAdapter(
-            child: SizedBox(
-              height: 12,
-            ),
-          ),
-          CustomSliverGrid(),
-          CustomSliverListview(),
-        ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          if (constraints.maxWidth >= 600) {
+            return const TabletLayout();
+          } else {
+            return const MobileLayout();
+          }
+        },
       ),
     );
   }
 }
+
+
+
